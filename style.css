@@ -1,38 +1,72 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #E7EAEF;
-    line-height: 1.6;
+  background-color: #e7eaef;
+  line-height: 1.6;
 }
 
 nav a {
-    color: #E7EAEF;
-    text-decoration: none;
+  color: #e7eaef;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+.creators .link:hover,
+.creators .link:focus {
+  color: #edc5ab;
 }
 
 .about blockquote {
-    background-color: #EDC5AB;
+  background-color: #edc5ab;
 }
 
 .creators .link {
-    font-family: 'Lato', sans-serif;
-    text-decoration: none;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
 }
 
 .creators .link.font {
-    font-family: 'PT Serif', serif;
-    font-weight: bold;
+  font-family: "PT Serif", serif;
+  font-weight: bold;
 }
 
 .link,
 .link.font {
-    color: #37745B;
+  color: #37745b;
 }
 header {
-    background-color: #217074;
+  background-color: #217074;
+}
+
+.cta h2 {
+  color: #8b9d77;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: #edc5ab;
+  transform-origin: bottom right;
+  transition: transform 0.35s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
